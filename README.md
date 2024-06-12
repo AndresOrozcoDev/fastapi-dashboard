@@ -25,5 +25,5 @@ Create requirements.txt file
 Run the project
 
 ```bash
-  fastapi dev main.py
+  fastapi dev app/main.py
 ```
