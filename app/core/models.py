@@ -1,6 +1,6 @@
 from app.core.db import Base
 from sqlalchemy.orm import relationship
-from sqlalchemy import Column, Integer, String, ForeignKey
+from sqlalchemy import Column, Integer, String, ForeignKey, DateTime
 
 
 class Supermarket(Base):
@@ -27,6 +27,7 @@ class Product(Base):
     price = Column(Integer)
     value = Column(Integer)
     unit = Column(String)
+    created = Column(DateTime)
     supermarket_id = Column(Integer, ForeignKey('supermarket.id', ondelete='CASCADE'))
     supermarket = relationship('Supermarket', back_populates='product')
     category_id = Column(Integer, ForeignKey('category.id', ondelete='CASCADE'))

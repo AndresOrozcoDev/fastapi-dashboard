@@ -1,4 +1,5 @@
 from pydantic import BaseModel
+from datetime import datetime
 
 
 class Response(BaseModel):
@@ -15,7 +16,8 @@ class Category(BaseModel):
 class Product(BaseModel):
     name: str
     price: int
-    value: int
-    unit: str
+    value: int | None
+    unit: str | None
+    created: datetime | None
     supermarket_id: int
     category_id: int
