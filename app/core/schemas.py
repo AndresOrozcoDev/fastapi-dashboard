@@ -1,4 +1,5 @@
 from pydantic import BaseModel
+from typing import Optional
 from datetime import datetime
 
 
@@ -16,8 +17,8 @@ class Category(BaseModel):
 class Product(BaseModel):
     name: str
     price: int
-    value: int | None
-    unit: str | None
-    created: datetime | None
+    value: Optional[int]
+    unit: Optional[str]
+    created: Optional[datetime]
     supermarket_id: int
     category_id: int
