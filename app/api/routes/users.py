@@ -1,10 +1,11 @@
-from fastapi import APIRouter, HTTPException, Body
 from fastapi.responses import JSONResponse
 from fastapi.encoders import jsonable_encoder
+from fastapi import APIRouter, HTTPException, Body
 
 from app.core.db import Session
-from app.api.services.users import UserService
 from app.core.schemas import Response
+from app.api.services.users import UserService
+
 
 router = APIRouter()
 

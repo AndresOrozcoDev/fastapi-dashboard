@@ -13,6 +13,7 @@ app = FastAPI()
 origins = [
     "https://frontend-angular.azurewebsites.net",
     "http://localhost:4200",
+    "https://66787771b32e3beaa07779ad--rainbow-maamoul-615016.netlify.app",
     # Otros dominios permitidos pueden ir aquí
 ]
 
