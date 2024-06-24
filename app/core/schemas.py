@@ -19,6 +19,6 @@ class Product(BaseModel):
     price: int
     value: Optional[int]
     unit: Optional[str]
-    created: Optional[datetime]
+    created: Optional[str]
     supermarket_id: int
     category_id: int

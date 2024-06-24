@@ -27,7 +27,7 @@ class Product(Base):
     price = Column(Integer)
     value = Column(Integer)
     unit = Column(String)
-    created = Column(DateTime)
+    created = Column(String)
     supermarket_id = Column(Integer, ForeignKey('supermarket.id', ondelete='CASCADE'))
     supermarket = relationship('Supermarket', back_populates='product')
     category_id = Column(Integer, ForeignKey('category.id', ondelete='CASCADE'))
