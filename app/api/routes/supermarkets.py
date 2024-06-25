@@ -38,7 +38,7 @@ async def update_supermarket(id: int = Path(), name: str = Body()):
     isUpdated, supermarket = SupermarketService(db).update_supermarket(id, name)
     if not supermarket:
         return JSONResponse(status_code=404, content={'status_code': 404, 'message': 'Not found supermarket', 'data': jsonable_encoder(supermarket)})
-    return JSONResponse(status_code=200, content={'status_code': 200, 'message': 'Supermarked updated', 'data': jsonable_encoder(supermarket)})
+    return JSONResponse(status_code=200, content={'status_code': 200, 'message': 'Supermarket updated', 'data': jsonable_encoder(supermarket)})
 
 
 @router.delete('/{id}')
@@ -47,4 +47,4 @@ async def delete_supermarket(id: int = Path()):
     isDeleted, supermarket = SupermarketService(db).delete_supermarket(id)
     if not supermarket:
         return JSONResponse(status_code=404, content={'status_code': 404, 'message': 'Not found supermarket', 'data': jsonable_encoder(supermarket)})
-    return JSONResponse(status_code=200, content={'status_code': 200, 'message': 'Supermarked deleted', 'data': jsonable_encoder(supermarket)})
+    return JSONResponse(status_code=200, content={'status_code': 200, 'message': 'Supermarket deleted', 'data': jsonable_encoder(supermarket)})

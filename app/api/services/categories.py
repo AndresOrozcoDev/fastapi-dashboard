@@ -32,19 +32,19 @@ class CategoriesService():
     def update_category(self, id: int, name: str):
         exists = self.get_category_by_id(id)
         if not exists:
-            return False
+            return False, exists
         else:
-            supermarket = self.db.query(CategoryModel).filter(CategoryModel.id == id).first()
-            supermarket.name = name
+            category = self.db.query(CategoryModel).filter(CategoryModel.id == id).first()
+            category.name = name
             self.db.commit()
-            return True
+            return True, category
     
 
     def delete_category(self, id: int):
         exists = self.get_category_by_id(id)
         if not exists:
-            return False
+            return False, exists
         else:
             self.db.query(CategoryModel).filter(CategoryModel.id == id).delete()
             self.db.commit()
-            return True
+            return True, exists

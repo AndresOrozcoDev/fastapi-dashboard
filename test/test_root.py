@@ -6,7 +6,7 @@ from main import app
 client = TestClient(app)
 
 def test_read_root():
-    headers = {'api-key': 'development'}
+    headers = {'API_KEY': 'development'}
     response = client.get('/', headers=headers)
     assert response.status_code == 200
     assert response.json() == {"Hello": "World"}

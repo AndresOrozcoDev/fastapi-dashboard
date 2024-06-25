@@ -38,7 +38,7 @@ async def update_category(id: int = Path(), name: str = Body()):
     isUpdated, category = CategoriesService(db).update_category(id, name)
     if not category:
         return JSONResponse(status_code=404, content={'status_code': 404, 'message': 'Not found category', 'data': jsonable_encoder(category)})
-    return JSONResponse(status_code=200, content={'status_code': 200, 'message': 'Supermarked updated', 'data': jsonable_encoder(category)})
+    return JSONResponse(status_code=200, content={'status_code': 200, 'message': 'Category updated', 'data': jsonable_encoder(category)})
 
 
 @router.delete('/{id}')
@@ -47,4 +47,4 @@ async def delete_category(id: int = Path()):
     isDeleted, category = CategoriesService(db).delete_category(id)
     if not category:
         return JSONResponse(status_code=404, content={'status_code': 404, 'message': 'Not found category', 'data': jsonable_encoder(category)})
-    return JSONResponse(status_code=200, content={'status_code': 200, 'message': 'Supermarked deleted', 'data': jsonable_encoder(category)})
+    return JSONResponse(status_code=200, content={'status_code': 200, 'message': 'Category deleted', 'data': jsonable_encoder(category)})
