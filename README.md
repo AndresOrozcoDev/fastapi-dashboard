@@ -50,7 +50,7 @@ Run the project
 For unit tests, pyTest and Httpx are used, for the execution of said tests, execute the following command
 
 ```bash
-pytest
+  pytest
 ```
 
 ## Technology Stack and Features
