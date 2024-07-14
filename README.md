@@ -1,4 +1,4 @@
-# Angular 16 Dashboard
+# FastAPI Dashboard
 
 Endpoints RestFull API's for User dashboard panel.
 
