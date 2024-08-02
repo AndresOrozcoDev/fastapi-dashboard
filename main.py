@@ -11,7 +11,7 @@ from app.core.starlette.error_handle import ErrorHandler
 app = FastAPI()
 
 origins = [
-    "https://frontend-angular.azurewebsites.net",
+    "http://localhost:3000",
     "http://localhost:4200"
     # Otros dominios permitidos pueden ir aquí
 ]
@@ -26,7 +26,7 @@ app.add_middleware(
 
 @app.get("/")
 def read_root():
-    return {"Hello": "World"}
+    return {"Hello World from FastAPI"}
 
 app.include_router(api_router)
 app.add_middleware(ErrorHandler)
