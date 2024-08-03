@@ -12,7 +12,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY . .
 
 # Exponer el puerto 80 para acceder al servidor web
-EXPOSE 80
+EXPOSE 8000
 
 # Especifica el comando de inicio para FastAPI
 CMD ["bash", "-c", "python main.py"]
