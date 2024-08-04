@@ -42,7 +42,7 @@ Create requirements.txt file
 Run the project
 
 ```bash
-  fastapi dev main.py
+  py main.py
 ```
 
 ## Running unit tests
